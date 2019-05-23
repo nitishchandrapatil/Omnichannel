@@ -38,9 +38,7 @@ public class eShopActivation {
 	void closeBrowser() {
 		
 		
-		
-		
-		driver.quit();
+		driver.close();
 	}
 	
 }
