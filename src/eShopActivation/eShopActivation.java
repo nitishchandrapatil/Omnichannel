@@ -40,7 +40,6 @@ public class eShopActivation {
 		
 		driver.close();
 		
-		
 	}
 	
 }
