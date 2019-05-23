@@ -37,7 +37,7 @@ public class eShopActivation {
 	@AfterTest
 	void closeBrowser() {
 		
-		driver.close();
+		driver.quit();
 	}
 	
 }
