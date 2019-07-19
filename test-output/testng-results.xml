@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="6922" started-at="2019-05-22T13:34:12Z" finished-at="2019-05-22T13:34:19Z">
+  <suite name="Default suite" duration-ms="28427" started-at="2019-07-19T09:31:22Z" finished-at="2019-07-19T09:31:51Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="6922" started-at="2019-05-22T13:34:12Z" finished-at="2019-05-22T13:34:19Z">
+    <test name="Default test" duration-ms="28427" started-at="2019-07-19T09:31:22Z" finished-at="2019-07-19T09:31:51Z">
       <class name="eShopActivation.eShopActivation">
-        <test-method status="PASS" signature="startBrowser()[pri:0, instance:eShopActivation.eShopActivation@2a556333]" name="startBrowser" is-config="true" duration-ms="6896" started-at="2019-05-22T13:34:12Z" finished-at="2019-05-22T13:34:19Z">
+        <test-method status="PASS" signature="startBrowser()[pri:0, instance:eShopActivation.eShopActivation@86be70a]" name="startBrowser" is-config="true" duration-ms="28286" started-at="2019-07-19T09:31:22Z" finished-at="2019-07-19T09:31:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startBrowser -->
-        <test-method status="FAIL" signature="onboardingFlow()[pri:0, instance:eShopActivation.eShopActivation@2a556333]" name="onboardingFlow" duration-ms="5" started-at="2019-05-22T13:34:19Z" finished-at="2019-05-22T13:34:19Z">
+        <test-method status="FAIL" signature="onboardingFlow()[pri:0, instance:eShopActivation.eShopActivation@86be70a]" name="onboardingFlow" duration-ms="7" started-at="2019-07-19T09:31:51Z" finished-at="2019-07-19T09:31:51Z">
           <exception class="java.lang.ExceptionInInitializerError">
             <full-stacktrace>
               <![CDATA[java.lang.ExceptionInInitializerError
-at eShopActivation.eShopActivation.onboardingFlow(eShopActivation.java:30)
+at eShopActivation.eShopActivation.onboardingFlow(eShopActivation.java:31)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -50,7 +50,11 @@ at eShopActivation.fileRead.<clinit>(fileRead.java:29)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- onboardingFlow -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:eShopActivation.eShopActivation@86be70a]" name="closeBrowser" is-config="true" duration-ms="71" started-at="2019-07-19T09:31:51Z" finished-at="2019-07-19T09:31:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
       </class> <!-- eShopActivation.eShopActivation -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
