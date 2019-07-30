@@ -7,6 +7,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 //import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.BeforeTest;
@@ -17,6 +19,8 @@ public class eShopActivation  {
 	static WebDriver driver;
 	public WebElement e1;
 	public WebElement addTobasket;
+	public WebDriverWait wait;
+	
 	
 	
 	@BeforeTest
@@ -38,6 +42,9 @@ public class eShopActivation  {
 	e1= driver.findElement(By.id(str));
 	e1.click();
 	addTobasket= driver.findElement(By.id(f.addBasket()));
+	//Thread.sleep(6000);
+	wait =new WebDriverWait(driver, 30);
+	wait.until(ExpectedConditions.visibilityOfElementLocated((By) addTobasket));
 	addTobasket.click();	
 		
 	}
@@ -46,7 +53,7 @@ public class eShopActivation  {
 	void closeBrowser() {
 		
 		
-		driver.close();
+		//driver.close();
 		
 		
 		
