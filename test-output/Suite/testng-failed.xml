@@ -5,6 +5,7 @@
     <classes>
       <class name="eShopActivation.eShopActivation">
         <methods>
+          <include name="closeBrowser"/>
           <include name="onboardingFlow"/>
           <include name="startBrowser"/>
         </methods>

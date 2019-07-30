@@ -1,5 +1,6 @@
 package eShopActivation;
 
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -11,26 +12,33 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import eShopActivation.fileRead;
-public class eShopActivation {
+public class eShopActivation  {
 	
-	WebDriver driver;
+	static WebDriver driver;
 	public WebElement e1;
+	public WebElement addTobasket;
+	
+	
 	@BeforeTest
 	void startBrowser() {
 		System.setProperty("webdriver.chrome.driver", "C:\\Program Files (x86)\\Google\\Chrome\\chromedriver.exe");
 		driver=new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.get("http://10.150.34.40/");
-		driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
+		driver.get("http://10.150.255.167");
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
 	}
 
 	@Test
-	void onboardingFlow() {
-		
-	e1= driver.findElement(By.xpath(fileRead.imagePath));
+	void onboardingFlow() throws InterruptedException, IOException {
+	Thread.sleep(3000);	
+	fileRead f= new fileRead();
+	String str= f.propertyFile();
+	System.out.println(str);
+	e1= driver.findElement(By.id(str));
 	e1.click();
-		
+	addTobasket= driver.findElement(By.id(f.addBasket()));
+	addTobasket.click();	
 		
 	}
 	
