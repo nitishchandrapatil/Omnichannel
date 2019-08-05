@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="25223" started-at="2019-07-30T06:34:37Z" finished-at="2019-07-30T06:35:02Z">
+  <suite name="Default suite" duration-ms="20867" started-at="2019-08-05T14:20:55Z" finished-at="2019-08-05T14:21:16Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="25223" started-at="2019-07-30T06:34:37Z" finished-at="2019-07-30T06:35:02Z">
+    <test name="Default test" duration-ms="20867" started-at="2019-08-05T14:20:55Z" finished-at="2019-08-05T14:21:16Z">
       <class name="eShopActivation.eShopActivation">
-        <test-method status="PASS" signature="startBrowser()[pri:0, instance:eShopActivation.eShopActivation@7d70d1b1]" name="startBrowser" is-config="true" duration-ms="10263" started-at="2019-07-30T06:34:37Z" finished-at="2019-07-30T06:34:47Z">
+        <test-method status="PASS" signature="startBrowser()[pri:0, instance:eShopActivation.eShopActivation@12f41634]" name="startBrowser" is-config="true" duration-ms="6601" started-at="2019-08-05T14:20:55Z" finished-at="2019-08-05T14:21:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startBrowser -->
-        <test-method status="FAIL" signature="onboardingFlow()[pri:0, instance:eShopActivation.eShopActivation@7d70d1b1]" name="onboardingFlow" duration-ms="14921" started-at="2019-07-30T06:34:47Z" finished-at="2019-07-30T06:35:02Z">
+        <test-method status="FAIL" signature="onboardingFlow()[pri:0, instance:eShopActivation.eShopActivation@12f41634]" name="onboardingFlow" duration-ms="14241" started-at="2019-08-05T14:21:01Z" finished-at="2019-08-05T14:21:16Z">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element: Unable to locate element: {"method":"id","selector":"add-to-basket-PO_Base"}
@@ -23,7 +23,7 @@ Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:33:08.6
 System info: host: 'QINDW173', ip: '10.11.114.123', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_172'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
 Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\npatil\AppData\Loc...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 75.0.3770.142, webStorageEnabled: true}
-Session ID: d4973654b6ee442587a9b5e743f0b291
+Session ID: 0181e653120e129ce0c4b4441654f619
 *** Element info: {Using=id, value=add-to-basket-PO_Base}]]>
             </message>
             <full-stacktrace>
@@ -36,7 +36,7 @@ Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:33:08.6
 System info: host: 'QINDW173', ip: '10.11.114.123', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_172'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
 Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\npatil\AppData\Loc...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 75.0.3770.142, webStorageEnabled: true}
-Session ID: d4973654b6ee442587a9b5e743f0b291
+Session ID: 0181e653120e129ce0c4b4441654f619
 *** Element info: {Using=id, value=add-to-basket-PO_Base}
 at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
@@ -54,7 +54,7 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:3
 at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:365)
 at org.openqa.selenium.By$ById.findElement(By.java:218)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:311)
-at eShopActivation.eShopActivation.onboardingFlow(eShopActivation.java:44)
+at eShopActivation.eShopActivation.onboardingFlow(eShopActivation.java:52)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -86,11 +86,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- onboardingFlow -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:eShopActivation.eShopActivation@7d70d1b1]" name="closeBrowser" is-config="true" duration-ms="1" started-at="2019-07-30T06:35:02Z" finished-at="2019-07-30T06:35:02Z">
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:eShopActivation.eShopActivation@12f41634]" name="closeBrowser" is-config="true" duration-ms="1" started-at="2019-08-05T14:21:16Z" finished-at="2019-08-05T14:21:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
       </class> <!-- eShopActivation.eShopActivation -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

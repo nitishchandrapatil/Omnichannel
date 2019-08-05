@@ -11,12 +11,16 @@ import org.testng.annotations.Test;
 
 public class fileRead  {
 
-	Properties p;
+	static Properties p;
+	public String firstName;
+	public String lastName;
+	public String fiscalCode;
 
 	public String  propertyFile() throws IOException {
 		// TODO Auto-generated method stub
 		
 		String imagePath;
+		
 		File f =new File("./WebLocators.properties");
 		FileInputStream fr= new FileInputStream(f);
 		p =new Properties();
@@ -32,7 +36,20 @@ public class fileRead  {
 	   
 	String basketAdd=p.getProperty("basketSelect"); 
 	return basketAdd;
+		
 	   	   
+   }
+
+
+   public void customerName() {
+	   
+	   
+     firstName= p.getProperty("firstName_Id");
+	 lastName= p.getProperty("lastName_Id");
+	 fiscalCode=p.getProperty("fiscalCode_Id");
+	 
+	  
+	 
    }
 }
 
