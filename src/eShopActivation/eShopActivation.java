@@ -26,6 +26,10 @@ public class eShopActivation extends testDataprovide  {
 	public WebElement fName;
 	public WebElement lName;
 	public WebElement fisName;
+	public WebElement verifyButtonToContinue;
+	public WebElement email;
+	public WebElement confirmEmail;
+	public WebElement contactNumber;
 	fileRead f;
 	testDataprovide t1;
 
@@ -64,12 +68,36 @@ public class eShopActivation extends testDataprovide  {
     fName.sendKeys(t1.cellValue1);
     lName=driver.findElement(By.id(rcd.getLastName_Id()));
     Thread.sleep(2000);
-    //lName.sendKeys(super.cellValue2);
+   
     lName.sendKeys(t1.cellValue2);
     fisName= driver.findElement(By.id(rcd.getFiscalCode_Id()));
-    //fisName.sendKeys(super.cellValue3);
+    
     fisName.sendKeys(t1.cellValue3);
+    verifyButtonToContinue= driver.findElement(By.id(f.verifyButton_continue()));
+    Thread.sleep(3000);
+    
+    if(verifyButtonToContinue.isEnabled()) {
+    	verifyButtonToContinue.click();
+    }
+    
+    else {
+    	System.out.println("verifyButtonToContinue not Enabled");
+    }
+    
+    Thread.sleep(2000);
+    
+    fillCustomerPersonalDetails fill= new fillCustomerPersonalDetails();
+    email = driver.findElement(By.id(fill.getEmailfield()));
+    email.sendKeys(t1.cellValue4);
+    confirmEmail=driver.findElement(By.id(fill.getEmailfield_Confirmed()));
+    email.sendKeys(t1.cellValue5);
+    contactNumber = driver.findElement(By.id(fill.getContactphone()));
+    contactNumber.sendKeys("3837282992");
+    
+    
 	}
+	
+	
 	
 	@AfterTest
 	void closeBrowser() {

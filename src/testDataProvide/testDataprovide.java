@@ -15,7 +15,8 @@ public class testDataprovide {
 	public String cellValue1;
 	public String cellValue2;
 	public String cellValue3;
-	
+	public String cellValue4;
+	public String cellValue5;
 	public  void readExceldata(String filePath, String fileName, String sheetName) throws IOException {
 		
 		FileInputStream input= new FileInputStream(filePath);
@@ -36,6 +37,8 @@ public class testDataprovide {
 		 cellValue1=rowNumber.getCell(0).getStringCellValue();
 		 cellValue2=rowNumber.getCell(1).getStringCellValue();
 		 cellValue3=rowNumber.getCell(2).getStringCellValue();
+		 cellValue4=rowNumber.getCell(3).getStringCellValue();
+		 cellValue5=rowNumber.getCell(4).getStringCellValue();
 		System.out.println(cellValue1);
 		System.out.println(cellValue2);
 		System.out.println(cellValue3);

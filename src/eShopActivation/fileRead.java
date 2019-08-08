@@ -51,6 +51,17 @@ public class fileRead  {
 	  
 	 
    }
+   
+   
+  public String verifyButton_continue() {
+	  
+	String verifyContinue = p.getProperty("continue_checkout");   
+	return verifyContinue;
+	  
+	  
+  }
+  
+  
 }
 
 
