@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="52778" started-at="2019-08-19T12:37:56Z" finished-at="2019-08-19T12:38:49Z">
+  <suite name="Suite" duration-ms="91462" started-at="2019-09-03T16:31:52Z" finished-at="2019-09-03T16:33:23Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="52778" started-at="2019-08-19T12:37:56Z" finished-at="2019-08-19T12:38:49Z">
+    <test name="Test" duration-ms="91462" started-at="2019-09-03T16:31:52Z" finished-at="2019-09-03T16:33:23Z">
       <class name="eShopActivation.eShopActivation">
-        <test-method status="PASS" signature="startBrowser()[pri:0, instance:eShopActivation.eShopActivation@5ed828d]" name="startBrowser" is-config="true" duration-ms="9598" started-at="2019-08-19T12:37:56Z" finished-at="2019-08-19T12:38:06Z">
+        <test-method status="PASS" signature="startBrowser()[pri:0, instance:eShopActivation.eShopActivation@5ed828d]" name="startBrowser" is-config="true" duration-ms="21194" started-at="2019-09-03T16:31:52Z" finished-at="2019-09-03T16:32:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startBrowser -->
-        <test-method status="PASS" signature="onboardingFlow()[pri:0, instance:eShopActivation.eShopActivation@5ed828d]" name="onboardingFlow" duration-ms="43161" started-at="2019-08-19T12:38:06Z" finished-at="2019-08-19T12:38:49Z">
+        <test-method status="PASS" signature="onboardingFlow()[pri:0, instance:eShopActivation.eShopActivation@5ed828d]" name="onboardingFlow" duration-ms="70242" started-at="2019-09-03T16:32:13Z" finished-at="2019-09-03T16:33:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- onboardingFlow -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:eShopActivation.eShopActivation@5ed828d]" name="closeBrowser" is-config="true" duration-ms="0" started-at="2019-08-19T12:38:49Z" finished-at="2019-08-19T12:38:49Z">
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:eShopActivation.eShopActivation@5ed828d]" name="closeBrowser" is-config="true" duration-ms="1" started-at="2019-09-03T16:33:23Z" finished-at="2019-09-03T16:33:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->

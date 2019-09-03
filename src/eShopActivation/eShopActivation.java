@@ -10,6 +10,8 @@ import java.util.concurrent.TimeUnit;
 import javax.swing.text.html.HTMLDocument.Iterator;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -52,11 +54,15 @@ public class eShopActivation extends testDataprovide  {
 	public WebElement street;
 	public WebElement building;
 	public Robot ro;
+	public WebElement checks;
+	WebElement continuetoidentification;
+	deliverPage d;
 	fileRead f;
+	TakesScreenshot screenshot;
 	Select se;
 	testDataprovide t1;
 	fillCustomerPersonalDetails fill;
-
+	configurationPage c;
 	
 	
 	@BeforeTest
@@ -71,7 +77,7 @@ public class eShopActivation extends testDataprovide  {
 	
 	@Test
 	void onboardingFlow() throws InterruptedException, IOException, AWTException {
-	Thread.sleep(3000);	
+	Thread.sleep(5000);	
 	fileRead f= new fileRead();
 	String str= f.propertyFile();
 	System.out.println(str);
@@ -169,11 +175,44 @@ public class eShopActivation extends testDataprovide  {
     street.sendKeys("Via Carlo Veneziani");
     building= driver.findElement(fill.getBuildingNumber());
     building.sendKeys("58");
+    
     WebElement continueButton=driver.findElement(fill.buttonGoToConfiguration);
     continueButton.click();
+    //screenshot = (TakesScreenshot) ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+    c=new configurationPage();
+    WebElement simSelect= driver.findElement(By.xpath(c.selectSimCard("SIM-card")));
+    Thread.sleep(2000);
+    if(simSelect.isSelected()) {
+    System.out.println("SIM Already Selected");
 	}
-	
-	
+    else {
+    	simSelect.click();
+    	
+    }
+    
+    checks=driver.findElement(By.xpath(c.confirmCheckbox()));
+    checks.click();
+    continuetoidentification= driver.findElement(By.xpath(c.contineToIdentifications()));
+    assertTrue(continuetoidentification.isEnabled());
+    continuetoidentification.click();
+    Thread.sleep(2000);
+     d=new deliverPage();
+    WebElement identification_smart=driver.findElement(d.manualRecognition());
+    Thread.sleep(4000);
+    
+    identification_smart.click();
+    
+    WebElement continueToPaymenttypes= driver.findElement(By.xpath("//span[text()='Continua']"));
+    continueToPaymenttypes.click();
+    paymentMethods pay= new paymentMethods();
+    WebElement creditcardOption= driver.findElement(By.xpath(pay.getPayment_creditcard()));
+    Thread.sleep(3000);
+    creditcardOption.click();
+    Thread.sleep(2000);
+    WebElement continueTocc= driver.findElement(By.xpath("//button[@type='button' and @id='b2c-checkout-payment-pay']"));
+    continueTocc.click();
+    
+	}
 	
 	@AfterTest
 	void closeBrowser() {
