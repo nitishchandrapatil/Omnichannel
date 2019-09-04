@@ -36,6 +36,7 @@ import testDataProvide.testDataprovide;
 public class eShopActivation extends testDataprovide  {
 	
 	static WebDriver driver;
+	//WebDriverWait w;
 	public WebElement e1;
 	public WebElement addTobasket;
 	public WebDriverWait wait;
@@ -63,6 +64,7 @@ public class eShopActivation extends testDataprovide  {
 	testDataprovide t1;
 	fillCustomerPersonalDetails fill;
 	configurationPage c;
+	WebElement cardNumber, month,date,cvvNumber,acceptBox ;
 	
 	
 	@BeforeTest
@@ -206,11 +208,30 @@ public class eShopActivation extends testDataprovide  {
     continueToPaymenttypes.click();
     paymentMethods pay= new paymentMethods();
     WebElement creditcardOption= driver.findElement(By.xpath(pay.getPayment_creditcard()));
-    Thread.sleep(3000);
+    Thread.sleep(4000);
     creditcardOption.click();
     Thread.sleep(2000);
     WebElement continueTocc= driver.findElement(By.xpath("//button[@type='button' and @id='b2c-checkout-payment-pay']"));
     continueTocc.click();
+    Thread.sleep(20000);
+    paymentGatewaySIA payment= new paymentGatewaySIA();
+    //w =new WebDriverWait(driver,20);
+    
+    cardNumber=driver.findElement(payment.getCreditCardNumber());
+    cardNumber.sendKeys("4922950260000040");
+    month= driver.findElement(payment.getMonthNum());
+    month.sendKeys("11");
+    date= driver.findElement(payment.getDateNum());
+    date.sendKeys("19");
+    
+    cvvNumber = driver.findElement(payment.getCvvNum());
+    cvvNumber.sendKeys("111");
+    Thread.sleep(2000);
+    
+    acceptBox= driver.findElement(payment.getAcceptCheckbox());
+    acceptBox.click();
+    WebElement confirm = driver.findElement(By.id("confirm-payment-button"));
+    confirm.click();
     
 	}
 	
