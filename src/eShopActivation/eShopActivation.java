@@ -230,6 +230,7 @@ public class eShopActivation extends testDataprovide  {
     
     acceptBox= driver.findElement(payment.getAcceptCheckbox());
     acceptBox.click();
+    Thread.sleep(2000);
     WebElement confirm = driver.findElement(By.id("confirm-payment-button"));
     confirm.click();
     
