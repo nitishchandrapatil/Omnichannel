@@ -6,7 +6,7 @@ public class configurationPage {
 
 	WebDriver driver;
 	
-	private String simcard = "//label[text()=\"SIM-card\"]"; 
+	private String simcard = "//label[text()=\"SIM Standard\"]"; 
 	private String eSIM= "//label[text()=\"eSIM\"]";
 	private String checkBox = "//span[text()='Richiedi la fornitura immediata del servizio']";
 	private String continueToidentification= "//span[text()='Continua']";

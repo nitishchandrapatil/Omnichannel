@@ -83,8 +83,8 @@ public class eShopActivation extends testDataprovide  {
 	fileRead f= new fileRead();
 	String str= f.propertyFile();
 	System.out.println(str);
-	e1= driver.findElement(By.id(str));
-	e1.click();
+	driver.findElement(By.id(str)).click();
+	//e1.click();
 	addTobasket= driver.findElement(By.id(f.addBasket()));
 	Thread.sleep(6000);
 	//wait =new WebDriverWait(driver, 3000);

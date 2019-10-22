@@ -7,7 +7,7 @@ public class deliverPage {
 	
 	//private String deliveryType_standard= "";
 	private String identification_Video= "//label[@for='PO_Rec_Method_Video']";
-	private By identifiction_SmartPostman = By.xpath("//label[@for='PO_Rec_Method_Video']//following::label[1]");
+	private By identification_SmartPostman = By.xpath("//label[@for='PO_Rec_Method_Video']//following::label[1]");
 	
 	public String getVideoRecognised() {
 		
@@ -16,6 +16,6 @@ public class deliverPage {
 
 	public By manualRecognition() {
 		
-		return identifiction_SmartPostman; 
+		return identification_SmartPostman; 
 	}
 }

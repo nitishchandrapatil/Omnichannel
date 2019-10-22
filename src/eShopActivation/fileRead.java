@@ -12,9 +12,7 @@ import org.testng.annotations.Test;
 public class fileRead  {
 
 	static Properties p;
-	public String firstName;
-	public String lastName;
-	public String fiscalCode;
+	
 
 	public String  propertyFile() throws IOException {
 		// TODO Auto-generated method stub
@@ -41,16 +39,6 @@ public class fileRead  {
    }
 
 
-   public void customerName() {
-	   
-	   
-     firstName= p.getProperty("firstName_Id");
-	 lastName= p.getProperty("lastName_Id");
-	 fiscalCode=p.getProperty("fiscalCode_Id");
-	 
-	  
-	 
-   }
    
    
   public String verifyButton_continue() {
